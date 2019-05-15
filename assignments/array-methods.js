@@ -60,7 +60,7 @@ runners.forEach(item => {
     fullName.push('${item.first_name} ${item.last_name}')
 });
 
-console.log('=====' + fullName);
+console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
@@ -88,12 +88,15 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 let namesArr = [];
-runners.forEach (item +> namesArr.push(('${item.last_name}, ${item.first_name}')));
+runners.forEach (item => namesArr.push(('${item.last_name}, ${item.first_name}')));
 namesArr.sort(function(a, b) {
     var nameA = a.toUpperCase();
-    var nameB = b.toLocaleUpperCase();
+    var nameB = b.toUpperCase();
     if(nameA < nameB) {
         return -1;
+    }
+    if(nameA > nameB) {
+        return 1;
     }
     
     return 0;
@@ -108,9 +111,9 @@ console.log(Math.round(donationAverage));
 
 // Problem 3
 let topDonators = [];
-topDonators = runners {
+topDonators = runners 
     .filter(item => item.donation > 100)
     .sort((a,b) => b.donation - a.donation)
     .map(item => '${item.first_name} ${item.last_name} - $${item.donation}');
-}
+
 console.log(topDonators);
