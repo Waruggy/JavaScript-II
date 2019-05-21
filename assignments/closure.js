@@ -1,18 +1,18 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-function add (x) {
-    let addMe = x;
+function subtract (x) {
+    let subtractMe = x;
     
     return function(y) {
     
-    return x + y;
+    return x - y;
 }
 }
 
-let adderFour = add(4);
-let adderFive = add(5);
-let adderten = add(10);
-adderten(10);
+let startFour = subtract(4);
+let startFive = subtract(5);
+let startTen = subtract(10);
+console.log(startTen(10));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
@@ -26,8 +26,8 @@ const counter = () => {
     }
 };
 const newCounter = counter();
- newCounter(); // 1
- newCounter(); // 2
+ console.log(newCounter()); // 1
+ console.log(newCounter()); // 2
 
 // ==== Challenge 3: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
@@ -45,3 +45,4 @@ const counterFactory = () => {
         }
     }
 };
+console.log(counterFactory());
