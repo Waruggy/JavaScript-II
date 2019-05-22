@@ -12,7 +12,7 @@ function subtract (x) {
 let startFour = subtract(4);
 let startFive = subtract(5);
 let startTen = subtract(10);
-console.log(startTen(10));
+console.log(startTen(15));
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 

@@ -111,10 +111,10 @@ donationAverage /= runners.length;
 console.log(Math.round(donationAverage));
 
 // Problem 3
-let topDonators = [];
-topDonators = runners 
-    .filter(item => item.donation > 100)
+let highDonators = [];
+highDonators = runners 
+    .filter(item => item.donation > 200)
     .sort((a,b) => b.donation - a.donation)
     .map(item => `${item.first_name} ${item.last_name} - ${item.donation}`);
 
-console.log(topDonators);
+console.log(highDonators);
