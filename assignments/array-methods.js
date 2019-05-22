@@ -56,7 +56,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 let fullName = [];
-runners.forEach(function (object) {
+runners.forEach((object) => {
   let name = object.first_name + " " + object.last_name;
   fullName.push(name)
 })
@@ -89,12 +89,12 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 let namesArr = [];
-runners.forEach (item => namesArr.push(('${item.last_name}, ${item.first_name}')));
-namesArr.sort(function(a, b) {
+runners.forEach (item => namesArr.push((`${item.last_name}, ${item.first_name}`)));
+namesArr.sort((a, b) => {
     var nameA = a.toUpperCase();
     var nameB = b.toUpperCase();
     if(nameA < nameB) {
-        return -1;
+        return - 1;
     }
     if(nameA > nameB) {
         return 1;
@@ -111,10 +111,10 @@ donationAverage /= runners.length;
 console.log(Math.round(donationAverage));
 
 // Problem 3
-let topDonators = [];
-topDonators = runners 
-    .filter(item => item.donation > 100)
+let highDonators = [];
+highDonators = runners 
+    .filter(item => item.donation > 200)
     .sort((a,b) => b.donation - a.donation)
-    .map(item => '${item.first_name} ${item.last_name} - $${item.donation}');
+    .map(item => `${item.first_name} ${item.last_name} - ${item.donation}`);
 
-console.log(topDonators);
+console.log(highDonators);
