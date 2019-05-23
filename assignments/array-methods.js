@@ -89,19 +89,10 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 let namesArr = [];
-runners.forEach (item => namesArr.push((`${item.last_name}, ${item.first_name}`)));
-namesArr.sort((a, b) => {
-    var nameA = a.toUpperCase();
-    var nameB = b.toUpperCase();
-    if(nameA < nameB) {
-        return - 1;
-    }
-    if(nameA > nameB) {
-        return 1;
-    }
-    
-    return 0;
-});
+runners.forEach (item => namesArr.push(
+    (`${item.last_name}, ${item.first_name}`)
+));
+namesArr.sort(); 
 console.log(namesArr);
 
 // Problem 2
